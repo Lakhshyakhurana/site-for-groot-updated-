@@ -541,6 +541,7 @@ h3 { font-size: var(--fs-h3) }
   .poems p{
     max-width:450px;
     margin: 2em auto;
+    font-weight: var(--fw-bold);
     font-size: large;
   }
   .my-poems .btn{
