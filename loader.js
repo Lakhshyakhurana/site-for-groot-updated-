@@ -27,6 +27,14 @@ setTimeout(()=>{
     burger.onclick = function() {
         header.classList.toggle('menu-opened');
     }
-    
+    var about = document.querySelector("#about-link");
+    var contact = document.querySelector("#contact-link");
+    about.onclick = function() {
+        header.classList.remove('menu-opened');
+    }
+
+    contact.onclick = function() {
+        header.classList.remove('menu-opened');
+    }
 }());
 

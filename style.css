@@ -535,7 +535,7 @@ h3 { font-size: var(--fs-h3) }
     text-align: center;
     min-height: 70vh;
     background-color: var(--clr-light);
-    background-image: url(/poem-back.jpg);
+    background-image: url(/images/poem-back.jpg);
     background-blend-mode: multiply;
   }
   .poems p{
