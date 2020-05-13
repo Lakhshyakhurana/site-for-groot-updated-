@@ -30,7 +30,7 @@
     padding: 50px;
     border-radius: 30px;
 }
-.poem1, .poem3{
+.poem1, .poem3, .poem6{
     min-height:80vh;
     padding: 200px 0;
     background: url("/images/poemsimg3.png") no-repeat center  center/cover;
