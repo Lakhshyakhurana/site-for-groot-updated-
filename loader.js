@@ -18,7 +18,7 @@ setTimeout(()=>{
         preload.style.display = "none";
     },
     2000)
-},5000);
+},4000);
 
 (function(){
     var burger = document.querySelector('.burger-container');
