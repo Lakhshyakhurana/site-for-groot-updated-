@@ -1,7 +1,7 @@
 {
-    "name": "IIM_GROOT",
-    "short_name": "GROOT",
-    "theme_color": "#1b1010",
+    "name": "IIM_Groot",
+    "short_name": "IIM_Groot",
+    "theme_color": "#111",
     "background_color": "#f2f6f9",
     "display": "standalone",
     "orientation": "portrait",
