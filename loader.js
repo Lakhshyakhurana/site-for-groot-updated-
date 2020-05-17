@@ -18,7 +18,7 @@ setTimeout(()=>{
         preload.style.display = "none";
     },
     2000)
-},4000);
+},5000);
 
 (function(){
     var burger = document.querySelector('.burger-container');
@@ -38,3 +38,49 @@ setTimeout(()=>{
     }
 }());
 
+var buttonInstall = document.querySelector(".install");
+
+let deferredPrompt;
+
+buttonInstall.addEventListener('click', () => {
+    console.log('👍', 'butInstall-clicked');
+    const promptEvent = window.deferredPrompt;
+    if (!promptEvent) {
+      // The deferred prompt isn't available.
+      return;
+    }
+    // Show the install prompt.
+    promptEvent.prompt();
+    // Log the result
+    promptEvent.userChoice.then((result) => {
+      console.log('👍', 'userChoice', result);
+      // Reset the deferred prompt variable, since
+      // prompt() can only be called once.
+      window.deferredPrompt = null;
+      // Hide the install button.
+      divInstall.classList.toggle('hidden', true);
+    });
+  })
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+});
+
+buttonInstall.addEventListener('click', (e) => {
+    // Hide the app provided install promotion
+    // hideMyInstallPromotion();
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+    })
+  });

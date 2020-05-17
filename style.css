@@ -410,7 +410,7 @@ h3 { font-size: var(--fs-h3) }
     transform: scale(1) translateY(0px);
     opacity: 1;
   }
-  .logo{
+  .logo, .install{
     position: absolute;
     text-align: center;
     top:0;
@@ -420,7 +420,16 @@ h3 { font-size: var(--fs-h3) }
     transition: all 1s;
     cursor: pointer;
   }
-
+.install{
+  right: 10px;
+  left: unset;
+  font-size: var(--fs-h3);
+  color: antiquewhite;
+  cursor: pointer;
+}
+.install a{
+  color: rgb(221, 219, 219);
+}
 /* Intro Section */
 
 .intro{
