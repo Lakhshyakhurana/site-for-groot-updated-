@@ -269,7 +269,7 @@ h3 { font-size: var(--fs-h3) }
     background: rgba(0, 0, 0, 0.8);
     transition: all 0.5s ease-out, background 1s ease-out;
     transition-delay: 0.2s;
-    z-index: 1;
+    z-index: 3;
   }
   .burger-container{
     position: relative;

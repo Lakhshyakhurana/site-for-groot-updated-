@@ -1,57 +1,88 @@
-.poem-container h1{
-    font-family:"Mukta", sans-serif;
-    color:#000;
-    font-weight:bold;
-    font-size:3em;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'B612', sans-serif;
+    line-height: 1.5;
+    /* overflow-x: hidden; */
+}
+h1{
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 30px;
-    text-shadow:7px 5px 5px rgb(219, 201, 201);
+    margin-top: 60px;
+}
+body{
+    background: #fff1c1;
 }
 .poem-container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    padding:20px;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+.card{
+    min-width:250px;
+    height:150px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin:25px;
+}
+.title, .read-poem{
+    display: flex;
+    padding:10px;
     text-align: center;
+    padding-left: 20px;
 }
-.poem p,.poem h2{
-    font-family: 'Aladin', cursive;
-    margin-top: 20px;
-    font-size:1.2em;
-}
-.poem h2{
-    text-decoration: underline;
-    font-size:1.6em;
-}
-.poem{
+.title{
+    height: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #d9dad7;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     padding: 30px;
-    width: 92%;
-    padding: 50px;
-    border-radius: 30px;
 }
-.poem1, .poem3, .poem6{
-    min-height:80vh;
-    padding: 200px 0;
-    background: url("/images/poemsimg3.png") no-repeat center  center/cover;
+.read-poem button{
+    background: #5acc7c;
+    border:none;
+    padding: 10px;
+    cursor: pointer;
+    margin:10px;
 }
-.poem2,.poem4{
-    min-height:80vh;
-    margin-top:50px;
-    padding-top: 50px;
-    margin-bottom: 50px;
-    background: url("/images/poemsimg2.png") no-repeat center center/cover;
+.read-poem button:hover{
+    background: #3dad5d;
 }
-.poem5{
-    background: url("/images/poemsimg4.jpg") no-repeat center center/cover;
-    padding: 100px 0;
-    color: #0c0c0e;
+button:active{
+    outline: none;
 }
-@media screen and (min-width:820px){
-    .poem p,.poem h2{
-        font-size:1.5em;
-    }
-    .poem{
-        width: 65%;
-    }
+.poem-window{
+    z-index: 2;
+    position: fixed;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    right:0;
+    top:0;
+    padding:30px;
+    transform:translateX(100vw);
+    transition: all 1s;
+    overflow: auto;
+    padding-top: 45px;
+    opacity: 0;
+}
+.poem-window h2{
+    padding: 30px;
+}
+.poem-window p {
+    background:#eee;
+    padding: 30px;
+    border-radius: 15px;
+}
+.poem-window img{
+    position: absolute;
+    right:0;
+    margin: 20px;
+    cursor: pointer;
 }
