@@ -544,7 +544,36 @@ const poems = [
     When you realize it isn't what you want <br>
     The good thing is that it won't last <br>
     It will become a distant memory of my past`
-}
+},
+    {
+    title: "Sorry",
+    poem:`
+    I know saying anything<br>
+Won't change the way you feel<br>
+I am but an idiot<br>
+Who didn't even understand<br>
+What was at stake<br>
+A mistake is not the right word to use <br>
+I am a criminal for being like that<br>
+But there's something that you should know<br>
+I will always be there for you<br>
+I know what you're going through<br>
+I know it's been tough<br>
+I know that you've been doing your best<br>
+Still you feel it isn't enough <br>
+I'll listen<br>
+Whatever you have to say <br>
+I know I did a mistake<br>
+I know it is not easy <br>
+To forgive <br>
+I cannot put this feeling into words<br>
+But I am incomplete <br>
+Without you here<br>
+I am waiting for your reply to come<br>
+Hoping that you'll forgive me for this<br>
+One last time<br>
+        `
+    }
 ]
 
     const poemwindow = document.querySelector(".poem-window");
